@@ -1,0 +1,28 @@
+<div class = containerHead>
+  <h1 >  <i class="material-icons" style = "font-size: 60px;color: rgb(255, 255, 255); text-shadow: 2px 2px 4px #000000;">adbx</i>TV Series</h1>
+</div>
+<div class = containerBody>
+  <table class="table">
+      <thead class="thead-dark">
+          <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Channel</th>
+          <th>Seasons</th>
+          </tr>
+      </thead>
+      <tbody id="seriesView" *ngFor="let serie of series">
+        <tr>
+          <td><strong>{{serie.id}}</strong></td>
+          <td id="idSerie">{{serie.name}}</td>
+          <td>{{serie.channel}}</td>
+          <td>{{serie.seasons}}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <th colspan="4">Seasons average: {{average}}<h6 id = "average"></h6></th>
+          </tr>
+      </tfoot>
+  </table>
+</div>
